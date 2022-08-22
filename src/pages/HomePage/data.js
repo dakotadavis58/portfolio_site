@@ -1,0 +1,68 @@
+export const HomeObj1 = {
+  lightBg: false,
+  primary: true,
+  imgStart: "",
+  lightTopLine: true,
+  lightTextDesc: true,
+  lightText: true,
+  topLine: "Project #1",
+  headline: "Quick info about project",
+  description:
+    "Some boring text about helping business owners increase revenue. This is some random text. Lorem ipsum is boring",
+  liveDemoBtn: "Demo",
+  sourceCodeBtn: "Code",
+  start: "",
+  img: require("../../assets/tech-img.svg").default,
+  alt: "image",
+};
+export const HomeObj2 = {
+  lightBg: true,
+  primary: true,
+  imgStart: "start",
+  lightTopLine: false,
+  lightTextDesc: false,
+  lightText: false,
+  topLine: "Project #2",
+  headline: "More quick details about project, maybe what tech I used",
+  description:
+    "Some boring text about helping business owners increase revenue. This is some random text. Lorem ipsum is boring",
+  liveDemoBtn: "Demo",
+  sourceCodeBtn: "Code",
+  start: "true",
+  img: require("../../assets/profile-img.jpg"),
+  alt: "image",
+};
+export const HomeObj3 = {
+  lightBg: false,
+  primary: true,
+  imgStart: "",
+  lightTopLine: true,
+  lightTextDesc: true,
+  lightText: true,
+  topLine: "Project #3",
+  headline: "More project details",
+  description:
+    "Some boring text about helping business owners increase revenue. This is some random text. Lorem ipsum is boring",
+  liveDemoBtn: "Demo",
+  sourceCodeBtn: "Code",
+  start: "",
+  img: require("../../assets/tech-3.svg").default,
+  alt: "image",
+};
+export const HomeObj4 = {
+  lightBg: true,
+  primary: true,
+  imgStart: "start",
+  lightTopLine: false,
+  lightTextDesc: false,
+  lightText: false,
+  topLine: "Current Project",
+  headline: "Last project details",
+  description:
+    "Some boring text about helping business owners increase revenue. This is some random text. Lorem ipsum is boring",
+  liveDemoBtn: "Demo",
+  sourceCodeBtn: "Code",
+  start: "true",
+  img: require("../../assets/tech-2.svg").default,
+  alt: "image",
+};

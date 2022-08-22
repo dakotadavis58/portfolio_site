@@ -2,12 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="%PUBLIC_URL%/icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
-      name="description"
-      content="Web site created using create-react-app"
+      name="dakota davis portfolio site"
+      content="portfolio site showing off dakota davis' work"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
@@ -27,6 +27,48 @@
     <title>React App</title>
   </head>
   <body>
+    <?php
+
+        ini_set('display_errors', 1);
+        ini_set('display_startup_errors', 1);
+        error_reporting(E_ALL);    
+
+        /**
+         * Check if a honeypot field was filled on the form
+         * By checking on the $_REQUEST for the given field names
+         * in the $honeypot_fields. The field names passed on this
+         * var must be empty on the REQUEST.
+         * 
+         * @param $req {Array} must receive $_REQUEST superglobal
+         * @return {Boolean} tells if the honeypot catched something
+         */
+        function honeypot_validade ($req) {
+           
+            if (!empty($req)) {
+
+                $honeypot_fields = [
+                    "name",
+                    "email"
+                ];
+
+                foreach ($honeypot_fields as $field) {
+                    if (isset($req[$field]) && !empty($req[$field])) {
+                        return false;
+                    }
+                }
+            }
+
+            return true;
+        }
+
+        if (honeypot_validade($_REQUEST)) {
+            // The honeypot fields are clean, go on
+            $is_spammer = false;
+        } else {
+            // A spammer filled a honeypot field
+            $is_spammer = true;
+        }
+    ?>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
