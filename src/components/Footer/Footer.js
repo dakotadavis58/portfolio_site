@@ -1,22 +1,11 @@
 import React from "react";
-import {
-  FaFacebook,
-  FaGithub,
-  FaTwitter,
-  FaYoutube,
-  FaLinkedin,
-} from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Button } from "../../globalStyles";
 import {
   FooterContainer,
-  FooterLink,
   FooterLinksContainer,
-  FooterLinkItems,
-  FooterLinksWrapper,
-  FooterLinkTitle,
   FooterSubHeading,
   FooterSubscription,
-  FooterSubtext,
   Form,
   FormInput,
   SocialMediaWrap,
@@ -53,6 +42,13 @@ const Footer = () => {
             placeholder="Your email"
             required
           ></FormInput>
+          <FormInput
+            name="messageidk"
+            type="text"
+            placeholder="Subject"
+            maxLength={255}
+            required
+          ></FormInput>
           <FakeForm
             autoComplete="off"
             name="name"
@@ -70,44 +66,7 @@ const Footer = () => {
           </Button>
         </Form>
       </FooterSubscription>
-      <FooterLinksContainer>
-        {/* <FooterLinksWrapper>
-          <FooterLinkItems>
-            <FooterLinkTitle>About Us</FooterLinkTitle>
-            <FooterLink to="/">How it works</FooterLink>
-            <FooterLink to="/">Careers</FooterLink>
-            <FooterLink to="/">Testimonials</FooterLink>
-            <FooterLink to="/">Investors</FooterLink>
-            <FooterLink to="/">Terms of Service</FooterLink>
-          </FooterLinkItems>
-          <FooterLinkItems>
-            <FooterLinkTitle>Contact Us</FooterLinkTitle>
-            <FooterLink to="/">How it works</FooterLink>
-            <FooterLink to="/">Careers</FooterLink>
-            <FooterLink to="/">Testimonials</FooterLink>
-            <FooterLink to="/">Investors</FooterLink>
-            <FooterLink to="/">Terms of Service</FooterLink>
-          </FooterLinkItems>
-        </FooterLinksWrapper>
-        <FooterLinksWrapper>
-          <FooterLinkItems>
-            <FooterLinkTitle>Videos</FooterLinkTitle>
-            <FooterLink to="/">How it works</FooterLink>
-            <FooterLink to="/">Careers</FooterLink>
-            <FooterLink to="/">Testimonials</FooterLink>
-            <FooterLink to="/">Investors</FooterLink>
-            <FooterLink to="/">Terms of Service</FooterLink>
-          </FooterLinkItems>
-          <FooterLinkItems>
-            <FooterLinkTitle>Social Media</FooterLinkTitle>
-            <FooterLink to="/">How it works</FooterLink>
-            <FooterLink to="/">Careers</FooterLink>
-            <FooterLink to="/">Testimonials</FooterLink>
-            <FooterLink to="/">Investors</FooterLink>
-            <FooterLink to="/">Terms of Service</FooterLink>
-          </FooterLinkItems>
-        </FooterLinksWrapper> */}
-      </FooterLinksContainer>
+      <FooterLinksContainer></FooterLinksContainer>
       <SocialMedia>
         <SocialMediaWrap>
           <SocialLogo to="/">
@@ -130,17 +89,6 @@ const Footer = () => {
             >
               <FaGithub />
             </SocialIconLink>
-            {/* <SocialIconLink href="/" target="_blank" aria-label="twitter">
-              <FaTwitter />
-            </SocialIconLink>
-            <SocialIconLink
-              href="/"
-              target="_blank"
-              aria-label="youtube"
-              rel="noopener noreferrer"
-            >
-              <FaYoutube />
-            </SocialIconLink> */}
           </SocialIcons>
         </SocialMediaWrap>
       </SocialMedia>

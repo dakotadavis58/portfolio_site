@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import { FaMagento } from "react-icons/fa";
+import { BsCodeSlash } from "react-icons/bs";
 import { Container } from "../../globalStyles";
 import { Link } from "react-router-dom";
 import { COLORS } from "../../globalStyles";
 
-const { purple, lightPurp, darkBg, almostWhite } = COLORS;
+const { darkBg, almostWhite, primaryCol } = COLORS;
 
 export const Nav = styled.nav`
   background: ${darkBg};
@@ -35,8 +35,10 @@ export const NavLogo = styled(Link)`
   display: flex;
   align-items: center;
 `;
-export const NavIcon = styled(FaMagento)`
+export const NavIcon = styled(BsCodeSlash)`
   margin-right: 0.5rem;
+  width: 4rem;
+  height: 4rem;
 `;
 
 export const MobileIcon = styled.div`
@@ -55,14 +57,14 @@ export const MobileIcon = styled.div`
 
 export const NavMenu = styled.ul`
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   list-style: none;
   text-align: center;
 
   @media screen and (max-width: 960px) {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 50%;
     height: 90vh;
     position: absolute;
     top: 80px;
@@ -78,7 +80,7 @@ export const NavItem = styled.li`
   border-bottom: 4px solid transparent;
 
   &:hover {
-    border-bottom: 4px solid ${purple};
+    border-bottom: 4px solid ${primaryCol};
   }
 
   @media screen and (max-width: 960px) {
@@ -104,7 +106,7 @@ export const NavLinks = styled(Link)`
     display: table;
 
     &:hover {
-      color: #4b59f7;
+      color: ${primaryCol};
       transition: all 0.3s ease;
     }
   }

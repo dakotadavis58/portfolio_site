@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
-import { Button } from "../../globalStyles";
 import {
   MobileIcon,
   Nav,
@@ -33,7 +32,6 @@ const Navbar = () => {
   useEffect(() => {
     showButton();
   }, []);
-  // window.addEventListener("resize", showButton);
 
   return (
     <>
@@ -42,7 +40,7 @@ const Navbar = () => {
           <NavbarContainer>
             <NavLogo to="/" onClick={closeMobileMenu}>
               <NavIcon />
-              Some kind of logo
+              Dakota's Portfolio
             </NavLogo>
             <MobileIcon onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}

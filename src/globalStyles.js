@@ -1,8 +1,8 @@
 import styled, { createGlobalStyle } from "styled-components";
 
-const primaryCol = "#219c1f";
-const secondaryCol = "#0467FB";
 export const COLORS = {
+  secondaryCol: "#d966ff",
+  primaryCol: "#9900cc",
   primaryGreen: "#219c1f",
   lightGreen: "#2dd52a",
   darkGreen: "#041504",

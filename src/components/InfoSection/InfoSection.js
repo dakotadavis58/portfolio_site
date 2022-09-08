@@ -25,7 +25,9 @@ const InfoSection = ({
   description,
   lightTextDesc,
   liveDemoBtn,
+  demoLink,
   sourceCodeBtn,
+  sourceCodeLink,
   start,
   img,
   alt,
@@ -46,10 +48,12 @@ const InfoSection = ({
                   ""
                 ) : (
                   <BtnWrapper>
-                    <Link to="/sign-up">
+                    <Link to={sourceCodeLink}>
                       <Button big fontBig primary={primary}>
                         {sourceCodeBtn}
                       </Button>
+                    </Link>
+                    <Link to={demoLink}>
                       <Button big fontBig primary={primary}>
                         {liveDemoBtn}
                       </Button>

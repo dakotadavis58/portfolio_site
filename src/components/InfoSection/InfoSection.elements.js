@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { COLORS } from "../../globalStyles";
+import { mobile } from "../responsive";
 
 const { purple, lightPurp, darkBg, almostWhite, lightGrey } = COLORS;
 
@@ -45,7 +46,7 @@ export const TextWrapper = styled.div`
 
 export const BtnWrapper = styled.div`
   display: flex;
-
+  ${mobile({ flexDirection: "column" })}
   * {
     margin: 5px 10px;
     text-decoration: none;

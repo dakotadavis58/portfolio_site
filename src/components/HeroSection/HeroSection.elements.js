@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { BsArrowDownCircle } from "react-icons/bs";
 import { Button, COLORS } from "../../globalStyles";
 
-const { purple, lightPurp, darkBg } = COLORS;
+const { secondaryCol } = COLORS;
 
 export const HeroSec = styled.div`
   color: #fff;
@@ -52,7 +52,7 @@ export const TextWrapper = styled.div`
 `;
 
 export const TopLine = styled.div`
-  color: ${({ lightTopLine }) => (lightTopLine ? "#a9b3c1" : lightPurp)};
+  color: ${({ lightTopLine }) => (lightTopLine ? "#a9b3c1" : secondaryCol)};
   font-size: 24px;
   line-height: 16px;
   letter-spacing: 1.4px;
@@ -91,7 +91,7 @@ export const SocialIconLink = styled.a`
   color: #fff;
   font-size: 38px;
   &:hover {
-    color: ${lightPurp};
+    color: ${secondaryCol};
   }
 `;
 export const SocialIcons = styled.div`
@@ -102,15 +102,16 @@ export const SocialIcons = styled.div`
 `;
 export const ProjectsButton = styled.a`
   position: absolute;
-  top: 700px;
+  top: 80vh;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  width: 40px;
   color: #fff;
   max-width: 40px;
-  justify-self: center;
   cursor: pointer;
-  text-decoration: none;
   font-size: 3rem;
-  align-items: center;
-  transform: translate(-300%, 0%);
 `;
 export const NavIcon = styled(BsArrowDownCircle)`
   margin-right: 0.5rem;
