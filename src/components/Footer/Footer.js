@@ -27,6 +27,13 @@ import { links } from "../../data";
 import { AiTwotoneMail } from "react-icons/ai";
 
 const Footer = () => {
+  const initialState = {
+    nameidk: "",
+    emailidk: "",
+    messageidk: "",
+    name: "",
+    email: "",
+  };
   const [inputs, setInputs] = useState({
     nameidk: "",
     emailidk: "",
@@ -43,11 +50,13 @@ const Footer = () => {
       send("service_z5llvnw", "template_go9t41c", inputs, "Gzf-kee83gky8UZqw")
         .then((res) => {
           console.log(`Success:`, res.status, res.text);
+          console.log(inputs);
         })
         .catch((err) => {
           console.log("Failed: ", err);
         });
     }
+    setInputs(initialState);
   };
 
   const handleChange = (e) => {
@@ -86,7 +95,7 @@ const Footer = () => {
           <FormInput
             name="messageidk"
             type="text"
-            value={inputs.message}
+            value={inputs.messageidk}
             placeholder="Message"
             onChange={handleChange}
             maxLength={255}
