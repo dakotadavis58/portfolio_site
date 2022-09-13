@@ -7,7 +7,7 @@ const { secondaryCol } = COLORS;
 export const HeroSec = styled.div`
   color: #fff;
   padding: 160px 0;
-  height: 94vh;
+  height: 100vh;
   width: 100%;
   background: url("https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
   background-size: cover;
@@ -17,9 +17,9 @@ export const HeroSec = styled.div`
 
 export const Overlay = styled.div`
   position: absolute;
-  height: 94vh;
+  height: 100vh;
   width: 100%;
-  top: 80px;
+  top: 0px;
   left: 0;
   background: rgba(17, 17, 17, 0.8);
   display: flex;
@@ -53,23 +53,23 @@ export const TextWrapper = styled.div`
 
 export const TopLine = styled.div`
   color: ${({ lightTopLine }) => (lightTopLine ? "#a9b3c1" : secondaryCol)};
-  font-size: 24px;
+  font-size: 30px;
   line-height: 16px;
   letter-spacing: 1.4px;
   margin-bottom: 16px;
 `;
 export const Title = styled.div`
   margin-bottom: 20px;
-  font-size: 54px;
+  font-size: 60px;
   line-height: 1.1;
   color: white;
 `;
 export const Subtitle = styled.p`
   max-width: 440px;
   margin-bottom: 35px;
-  font-size: 24px;
+  font-size: 28px;
   line-height: 24px;
-  color: #747e8c;
+  color: #b6b4b8;
 `;
 export const SocialMedia = styled.section`
   max-width: 1000px;
@@ -90,6 +90,8 @@ export const SocialMediaWrap = styled.div`
 export const SocialIconLink = styled.a`
   color: #fff;
   font-size: 38px;
+  transition: all 0.3s ease;
+
   &:hover {
     color: ${secondaryCol};
   }
@@ -117,7 +119,31 @@ export const NavIcon = styled(BsArrowDownCircle)`
   margin-right: 0.5rem;
 `;
 
-export const Resume = styled(Button)`
-  margin-top: 70px;
-  max-width: 200px;
+export const Resume = styled.a`
+  text-decoration: none;
+  margin-top: 8rem;
+  max-width: 300px;
+  display: inline-block;
+  font-size: larger;
+  border-radius: 4px;
+  background: ${({ primary }) => (primary ? COLORS.purple : COLORS.lightPurp)};
+  white-space: nowrap;
+  padding: ${({ big }) => (big ? "12px 64px" : "10px 20px")};
+  color: ${COLORS.almostWhite};
+  font-size: ${({ fontBig }) => (fontBig ? "20px" : "16px")};
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    transition: all 0.3s ease-out;
+    color: ${({ primary }) => (primary ? COLORS.darkBg : COLORS.almostWhite)};
+    background: ${({ primary }) =>
+      primary ? COLORS.lightPurp : COLORS.purple};
+  }
+
+  @media screen and (max-width: 960px) {
+    width: 100%;
+    margin: 20px;
+  }
 `;

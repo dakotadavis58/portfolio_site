@@ -1,5 +1,6 @@
 import React from "react";
 import { Container } from "../../globalStyles";
+import { ddavis } from "../../assets/ddavis_resume.docx";
 import {
   HeroCol,
   HeroSec,
@@ -16,6 +17,7 @@ import {
   TopLine,
 } from "./HeroSection.elements";
 import { BsArrowDownCircle } from "react-icons/bs";
+import { AiTwotoneMail } from "react-icons/ai";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const HeroSection = () => {
@@ -40,6 +42,13 @@ const HeroSection = () => {
                         <FaLinkedin />
                       </SocialIconLink>
                       <SocialIconLink
+                        href="mailto:dakota@dakotadavis.me"
+                        target="_blank"
+                        aria-label="email"
+                      >
+                        <AiTwotoneMail />
+                      </SocialIconLink>
+                      <SocialIconLink
                         href="https://github.com/dakotadavis58"
                         target="_blank"
                         aria-label="github"
@@ -49,7 +58,14 @@ const HeroSection = () => {
                     </SocialIcons>
                   </SocialMediaWrap>
                 </SocialMedia>
-                <Resume primary>Download Resume</Resume>
+                <Resume
+                  primary
+                  download
+                  target="_blank"
+                  href="https://firebasestorage.googleapis.com/v0/b/styled-ecommerce-app.appspot.com/o/ddavis_resume.pdf?alt=media&token=150e7a83-ad02-4068-a5ac-939fbcc1862b"
+                >
+                  Download Resume
+                </Resume>
                 <ProjectsButton href="#first_project">
                   <BsArrowDownCircle />
                 </ProjectsButton>

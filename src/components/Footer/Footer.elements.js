@@ -74,6 +74,11 @@ export const FormInput = styled.input`
   }
 `;
 
+export const Left = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 export const FooterLinksContainer = styled.div`
   width: 100%;
   max-width: 1000px;
@@ -163,9 +168,33 @@ export const SocialIcons = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100px;
+  width: 200px;
 `;
 export const SocialIconLink = styled.a`
+  color: #fff;
+  font-size: 40px;
+  transition: all 0.3s;
+  &:hover {
+    color: ${COLORS.lightPurp};
+  }
+`;
+export const Center = styled.div`
+  color: #fff;
+  font-size: 24px;
+  width: 200px;
+`;
+export const NormLink = styled.a`
+  color: ${COLORS.lightPurp};
+  font-size: 16px;
+  text-decoration: none;
+  padding: 0;
+  line-height: 28px;
+`;
+export const Links = styled.ul`
+  display: grid;
+  grid-template-columns: auto auto;
+
+  font-weight: bold;
   color: #fff;
   font-size: 24px;
 `;

@@ -83,7 +83,7 @@ export const ImgWrapper = styled.div`
 `;
 export const Img = styled.img`
   padding-right: 0;
-  border: 0;
+  border-radius: 25%;
   max-width: 100%;
   vertical-align: middle;
   display: inline-block;

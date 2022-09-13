@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Button } from "../../globalStyles";
+import { send } from "emailjs-com";
+import axios from "axios";
 import {
   FooterContainer,
   FooterLinksContainer,
@@ -16,9 +18,44 @@ import {
   SocialIconLink,
   SocialMedia,
   FakeForm,
+  Left,
+  Center,
+  Links,
+  NormLink,
 } from "./Footer.elements";
+import { links } from "../../data";
+import { AiTwotoneMail } from "react-icons/ai";
 
 const Footer = () => {
+  const [inputs, setInputs] = useState({
+    nameidk: "",
+    emailidk: "",
+    messageidk: "",
+    name: "",
+    email: "",
+  });
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (inputs.name || inputs.email) {
+      console.log("No spam allowed");
+      return;
+    } else {
+      send("service_z5llvnw", "template_go9t41c", inputs, "Gzf-kee83gky8UZqw")
+        .then((res) => {
+          console.log(`Success:`, res.status, res.text);
+        })
+        .catch((err) => {
+          console.log("Failed: ", err);
+        });
+    }
+  };
+
+  const handleChange = (e) => {
+    setInputs((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
+  };
   return (
     <FooterContainer>
       <FooterSubscription>
@@ -28,24 +65,30 @@ const Footer = () => {
         {/* <FooterSubtext>
           I look forward to working with you
         </FooterSubtext> */}
-        <Form>
+        <Form onSubmit={handleSubmit}>
           <FormInput
             name="nameidk"
             type="text"
+            value={inputs.nameidk}
             placeholder="Your name"
+            onChange={handleChange}
             maxLength={100}
             required
           ></FormInput>
           <FormInput
             name="emailidk"
-            type="text"
+            type="email"
+            value={inputs.emailidk}
             placeholder="Your email"
+            onChange={handleChange}
             required
           ></FormInput>
           <FormInput
             name="messageidk"
             type="text"
-            placeholder="Subject"
+            value={inputs.message}
+            placeholder="Message"
+            onChange={handleChange}
             maxLength={255}
             required
           ></FormInput>
@@ -53,15 +96,19 @@ const Footer = () => {
             autoComplete="off"
             name="name"
             type="text"
+            value={inputs.name}
             placeholder="Your name"
+            onChange={handleChange}
           ></FakeForm>
           <FakeForm
             autoComplete="off"
             name="email"
             type="email"
             placeholder="Your email"
+            value={inputs.email}
+            onChange={handleChange}
           ></FakeForm>
-          <Button fontBig primary>
+          <Button type="submit" fontBig primary>
             Submit
           </Button>
         </Form>
@@ -69,11 +116,23 @@ const Footer = () => {
       <FooterLinksContainer></FooterLinksContainer>
       <SocialMedia>
         <SocialMediaWrap>
-          <SocialLogo to="/">
-            <SocialIcon />
-            Dakota Davis
-          </SocialLogo>
-          <WebsiteRights>Dakota Davis © 2022</WebsiteRights>
+          <Left>
+            <SocialLogo to="/">Dakota Davis</SocialLogo>
+            <WebsiteRights>© 2022, Built by Dakota Davis </WebsiteRights>
+          </Left>
+          <Center>
+            Links
+            <Links>
+              {links.map((link) => {
+                return (
+                  <NormLink key={link.label} href={link.to}>
+                    {link.label}
+                  </NormLink>
+                );
+              })}
+              <SocialIconLink></SocialIconLink>
+            </Links>
+          </Center>
           <SocialIcons>
             <SocialIconLink
               href="https://www.linkedin.com/in/dakota-davis-929213220/"
@@ -88,6 +147,13 @@ const Footer = () => {
               aria-label="github"
             >
               <FaGithub />
+            </SocialIconLink>
+            <SocialIconLink
+              href="mailto:dakota@dakotadavis.me"
+              target="_blank"
+              aria-label="email"
+            >
+              <AiTwotoneMail />
             </SocialIconLink>
           </SocialIcons>
         </SocialMediaWrap>

@@ -7,37 +7,25 @@ import { COLORS } from "../../globalStyles";
 const { darkBg, almostWhite, primaryCol } = COLORS;
 
 export const Nav = styled.nav`
-  background: ${darkBg};
+  position: absolute;
+  background: transparent;
   height: 80px;
   display: flex;
-  justify-content: center;
   align-items: center;
   font-size: 1.2rem;
-  position: sticky;
-  top: 0;
   z-index: 999;
+  width: 100%;
 `;
 
 export const NavbarContainer = styled(Container)`
   display: flex;
-  justify-content: space-between;
   height: 80px;
-
   ${Container}
 `;
 
-export const NavLogo = styled(Link)`
-  color: ${almostWhite};
-  justify-self: flex-start;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 2rem;
-  display: flex;
-  align-items: center;
-`;
 export const NavIcon = styled(BsCodeSlash)`
   margin-right: 0.5rem;
-  width: 4rem;
+  width: 2rem;
   height: 4rem;
 `;
 
@@ -55,9 +43,11 @@ export const MobileIcon = styled.div`
   }
 `;
 
-export const NavMenu = styled.ul`
+export const NavMenu = styled.div`
   display: flex;
-  align-items: flex-end;
+  justify-content: space-evenly;
+  flex: 1;
+  text-decoration: none;
   list-style: none;
   text-align: center;
 
@@ -77,10 +67,10 @@ export const NavMenu = styled.ul`
 
 export const NavItem = styled.li`
   height: 80px;
-  border-bottom: 4px solid transparent;
-
+  transition: all 0.3s ease;
+  /* border-bottom: 2px solid ${primaryCol}; */
   &:hover {
-    border-bottom: 4px solid ${primaryCol};
+    border-bottom: 8px double ${primaryCol};
   }
 
   @media screen and (max-width: 960px) {

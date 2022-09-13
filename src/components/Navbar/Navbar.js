@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
+import { links } from "../../data";
 import {
   MobileIcon,
   Nav,
@@ -38,20 +39,17 @@ const Navbar = () => {
       <IconContext.Provider value={{ color: "#fff" }}>
         <Nav>
           <NavbarContainer>
-            <NavLogo to="/" onClick={closeMobileMenu}>
-              <NavIcon />
-              Dakota's Portfolio
-            </NavLogo>
             <MobileIcon onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
             </MobileIcon>
             <NavMenu onClick={handleClick} click={click}>
-              <NavItem>
-                <NavLinks to="/">Home</NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks to="/about">About</NavLinks>
-              </NavItem>
+              {links.map((link) => {
+                return (
+                  <NavItem key={link.label}>
+                    <NavLinks to={link.to}>{link.label}</NavLinks>
+                  </NavItem>
+                );
+              })}
             </NavMenu>
           </NavbarContainer>
         </Nav>
