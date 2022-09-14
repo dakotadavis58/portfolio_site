@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { COLORS } from "../../globalStyles";
-import { mobile } from "../responsive";
+import { mobile } from "../../responsive";
 
 const { purple, lightPurp, darkBg, almostWhite, lightGrey } = COLORS;
 
@@ -66,6 +66,24 @@ export const Heading = styled.div`
   font-size: 48px;
   line-height: 1.1;
   color: ${({ lightText }) => (lightText ? almostWhite : darkBg)};
+`;
+
+export const Tech = styled.div`
+  color: black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 100%;
+`;
+export const TechItem = styled.span`
+  background-color: ${COLORS.almostWhite};
+  color: black;
+  display: flex;
+  margin: 6px;
+  padding: 5px;
+  border-radius: 4px;
 `;
 
 export const Subtitle = styled.p`

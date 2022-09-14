@@ -12,7 +12,10 @@ import {
   TextWrapper,
   TopLine,
   BtnWrapper,
+  Tech,
+  TechItem,
 } from "./InfoSection.elements";
+import { data } from "../../data";
 
 const InfoSection = ({
   primary,
@@ -33,6 +36,7 @@ const InfoSection = ({
   alt,
   id,
   noButtons,
+  tech,
 }) => {
   return (
     <>
@@ -43,6 +47,11 @@ const InfoSection = ({
               <TextWrapper>
                 <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headline}</Heading>
+                <Tech>
+                  {tech.map((tech) => {
+                    return <TechItem key={tech}>{tech}</TechItem>;
+                  })}
+                </Tech>
                 <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
                 {noButtons ? (
                   ""

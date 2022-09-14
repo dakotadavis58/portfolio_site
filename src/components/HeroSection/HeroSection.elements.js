@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { BsArrowDownCircle } from "react-icons/bs";
 import { Button, COLORS } from "../../globalStyles";
+import { mobile } from "../../responsive";
 
 const { secondaryCol } = COLORS;
 
@@ -57,12 +58,15 @@ export const TopLine = styled.div`
   line-height: 16px;
   letter-spacing: 1.4px;
   margin-bottom: 16px;
+  ${mobile({ fontSize: "22px" })}
 `;
+
 export const Title = styled.div`
   margin-bottom: 20px;
   font-size: 60px;
   line-height: 1.1;
   color: white;
+  ${mobile({ fontSize: "45px" })}
 `;
 export const Subtitle = styled.p`
   max-width: 440px;
@@ -70,6 +74,7 @@ export const Subtitle = styled.p`
   font-size: 28px;
   line-height: 24px;
   color: #b6b4b8;
+  ${mobile({ fontSize: "24px" })}
 `;
 export const SocialMedia = styled.section`
   max-width: 1000px;
@@ -143,7 +148,6 @@ export const Resume = styled.a`
   }
 
   @media screen and (max-width: 960px) {
-    width: 100%;
     margin: 20px;
   }
 `;

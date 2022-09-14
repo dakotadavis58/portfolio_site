@@ -6,10 +6,8 @@ import {
   MobileIcon,
   Nav,
   NavbarContainer,
-  NavIcon,
   NavItem,
   NavLinks,
-  NavLogo,
   NavMenu,
 } from "./Navbar.elements";
 
@@ -46,7 +44,7 @@ const Navbar = () => {
               {links.map((link) => {
                 return (
                   <NavItem key={link.label}>
-                    <NavLinks to={link.to}>{link.label}</NavLinks>
+                    <NavLinks href={link.to}>{link.label}</NavLinks>
                   </NavItem>
                 );
               })}

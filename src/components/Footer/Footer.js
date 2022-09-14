@@ -74,7 +74,7 @@ const Footer = () => {
         {/* <FooterSubtext>
           I look forward to working with you
         </FooterSubtext> */}
-        <Form onSubmit={handleSubmit}>
+        <Form id="contact" onSubmit={handleSubmit}>
           <FormInput
             name="nameidk"
             type="text"
@@ -151,18 +151,18 @@ const Footer = () => {
               <FaLinkedin />
             </SocialIconLink>
             <SocialIconLink
-              href="https://github.com/dakotadavis58"
-              target="_blank"
-              aria-label="github"
-            >
-              <FaGithub />
-            </SocialIconLink>
-            <SocialIconLink
               href="mailto:dakota@dakotadavis.me"
               target="_blank"
               aria-label="email"
             >
               <AiTwotoneMail />
+            </SocialIconLink>
+            <SocialIconLink
+              href="https://github.com/dakotadavis58"
+              target="_blank"
+              aria-label="github"
+            >
+              <FaGithub />
             </SocialIconLink>
           </SocialIcons>
         </SocialMediaWrap>

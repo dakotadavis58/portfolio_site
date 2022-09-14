@@ -4,7 +4,7 @@ import { Container } from "../../globalStyles";
 import { Link } from "react-router-dom";
 import { COLORS } from "../../globalStyles";
 
-const { darkBg, almostWhite, primaryCol } = COLORS;
+const { darkBg, primaryCol } = COLORS;
 
 export const Nav = styled.nav`
   position: absolute;
@@ -55,9 +55,9 @@ export const NavMenu = styled.div`
     display: flex;
     flex-direction: column;
     width: 50%;
-    height: 90vh;
+    height: 100vh;
     position: absolute;
-    top: 80px;
+    top: 0px;
     left: ${({ click }) => (click ? 0 : "-100%")};
     opacity: 1;
     transition: all 0.5s ease;
@@ -81,7 +81,7 @@ export const NavItem = styled.li`
     }
   }
 `;
-export const NavLinks = styled(Link)`
+export const NavLinks = styled.a`
   color: #fff;
   display: flex;
   align-items: center;

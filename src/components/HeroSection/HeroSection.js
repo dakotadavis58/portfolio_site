@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "../../globalStyles";
-import { ddavis } from "../../assets/ddavis_resume.docx";
+
 import {
   HeroCol,
   HeroSec,
@@ -60,7 +60,7 @@ const HeroSection = () => {
                 </SocialMedia>
                 <Resume
                   primary
-                  download
+                  download="ddavis_resume.pdf"
                   target="_blank"
                   href="https://firebasestorage.googleapis.com/v0/b/styled-ecommerce-app.appspot.com/o/ddavis_resume.pdf?alt=media&token=150e7a83-ad02-4068-a5ac-939fbcc1862b"
                 >

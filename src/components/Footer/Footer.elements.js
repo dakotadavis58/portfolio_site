@@ -182,6 +182,7 @@ export const Center = styled.div`
   color: #fff;
   font-size: 24px;
   width: 200px;
+  margin: 2rem;
 `;
 export const NormLink = styled.a`
   color: ${COLORS.lightPurp};

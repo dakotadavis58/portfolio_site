@@ -40,7 +40,7 @@ export const links = [
   },
   {
     label: "Projects",
-    to: "#projects",
+    to: "#first_project",
   },
   {
     label: "Contact",
