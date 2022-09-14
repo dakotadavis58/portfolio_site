@@ -14,11 +14,13 @@ import {
 const Navbar = () => {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
+  console.log(button);
 
   const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => {
-    setClick(false);
-  };
+
+  // const closeMobileMenu = () => {
+  //   setClick(false);
+  // };
 
   const showButton = () => {
     if (window.innerWidth <= 960) {

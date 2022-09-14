@@ -15,7 +15,6 @@ import {
   Tech,
   TechItem,
 } from "./InfoSection.elements";
-import { data } from "../../data";
 
 const InfoSection = ({
   primary,
