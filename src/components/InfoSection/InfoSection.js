@@ -56,23 +56,25 @@ const InfoSection = ({
                   ""
                 ) : (
                   <BtnWrapper>
-                    <Link to={sourceCodeLink}>
+                    <a rel="noreferrer" target="_blank" href={sourceCodeLink}>
                       <Button big fontBig primary={primary}>
                         {sourceCodeBtn}
                       </Button>
-                    </Link>
-                    <Link to={demoLink}>
+                    </a>
+                    <a rel="noreferrer" target="_blank" href={demoLink}>
                       <Button big fontBig primary={primary}>
                         {liveDemoBtn}
                       </Button>
-                    </Link>
+                    </a>
                   </BtnWrapper>
                 )}
               </TextWrapper>
             </InfoCol>
             <InfoCol>
               <ImgWrapper start={start}>
-                <Img src={img} alt={alt} />
+                <a rel="noreferrer" target="_blank" href={demoLink}>
+                  <Img src={img} alt={alt} />
+                </a>
               </ImgWrapper>
             </InfoCol>
           </InfoRow>

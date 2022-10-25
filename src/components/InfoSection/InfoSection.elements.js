@@ -101,8 +101,10 @@ export const ImgWrapper = styled.div`
 `;
 export const Img = styled.img`
   padding-right: 0;
-  border-radius: 25%;
+  border-radius: 10%;
   max-width: 100%;
+  height: 100%;
+  width: 100%;
   vertical-align: middle;
   display: inline-block;
   max-height: 500px;

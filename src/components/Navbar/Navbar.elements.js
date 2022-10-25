@@ -68,7 +68,8 @@ export const NavMenu = styled.div`
 export const NavItem = styled.li`
   height: 80px;
   transition: all 0.3s ease;
-  /* border-bottom: 2px solid ${primaryCol}; */
+  box-shadow: 8px hidden transparent;
+  border-bottom: 8px solid transparent;
   &:hover {
     border-bottom: 8px double ${primaryCol};
   }
