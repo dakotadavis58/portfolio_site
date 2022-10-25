@@ -20,11 +20,13 @@ export const data = [
     description:
       "An ecommerce platform designed with styled components using React for the front end. The backend consists of a Node.js server that also uses firebase as the database and authentication method",
     liveDemoBtn: "Demo",
-    demoLink: "/",
-    sourceCodeLink: "/",
+    demoLink:
+      "https://styledcomponentecommerce-78qmga2ax-dakotadavis58.vercel.app/",
+    sourceCodeLink:
+      "https://github.com/dakotadavis58/styled_component_ecommerce",
     sourceCodeBtn: "Code",
     start: "",
-    img: require("./assets/tech-2.svg").default,
+    img: require("./assets/ecommerce_frame.png"),
     alt: "image",
   },
 ];
@@ -32,11 +34,11 @@ export const data = [
 export const links = [
   {
     label: "Home",
-    to: "/",
+    to: "#",
   },
   {
     label: "About",
-    to: "#about",
+    to: "#aboutme",
   },
   {
     label: "Projects",
