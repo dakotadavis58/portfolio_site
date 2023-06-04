@@ -21,6 +21,9 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Source Sans Pro', sans-serif;
         scroll-behavior: smooth;
     }
+    html {
+        font-size: 62.5%;
+    }
 `;
 
 export const Container = styled.div`
@@ -42,9 +45,9 @@ export const Button = styled.button`
   border-radius: 4px;
   background: ${({ primary }) => (primary ? COLORS.purple : COLORS.lightPurp)};
   white-space: nowrap;
-  padding: ${({ big }) => (big ? "12px 64px" : "10px 20px")};
+  padding: ${({ big }) => (big ? "1.2rem 6.4rem" : "1rem 2rem")};
   color: ${COLORS.almostWhite};
-  font-size: ${({ fontBig }) => (fontBig ? "20px" : "16px")};
+  font-size: ${({ fontBig }) => (fontBig ? "2rem" : "1.6rem")};
   outline: none;
   border: none;
   cursor: pointer;

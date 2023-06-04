@@ -14,7 +14,6 @@ import {
 const Navbar = () => {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
-  console.log(button);
 
   const handleClick = () => setClick(!click);
 
@@ -39,7 +38,7 @@ const Navbar = () => {
       <IconContext.Provider value={{ color: "#fff" }}>
         <Nav>
           <NavbarContainer>
-            <MobileIcon onClick={handleClick}>
+            <MobileIcon onClick={handleClick} click={click}>
               {click ? <FaTimes /> : <FaBars />}
             </MobileIcon>
             <NavMenu onClick={handleClick} click={click}>

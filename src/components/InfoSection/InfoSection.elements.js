@@ -6,7 +6,7 @@ const { purple, lightPurp, darkBg, almostWhite, lightGrey } = COLORS;
 
 export const InfoSec = styled.div`
   color: ${almostWhite};
-  padding: 160px 0;
+  padding: 100px 0;
   background: ${({ lightBg }) => (lightBg ? almostWhite : darkBg)};
 `;
 
@@ -78,12 +78,14 @@ export const Tech = styled.div`
   max-width: 100%;
 `;
 export const TechItem = styled.span`
-  background-color: ${COLORS.almostWhite};
-  color: black;
+  background-color: ${({ lightBg }) => (lightBg ? almostWhite : darkBg)};
+  color: ${({ lightBg }) => (lightBg ? darkBg : almostWhite)};
   display: flex;
-  margin: 6px;
-  padding: 5px;
-  border-radius: 4px;
+  margin: 0.4rem;
+  padding: 0.8rem;
+  letter-spacing: 1px;
+  border-radius: 0.8rem;
+  font-size: 1.2rem;
 `;
 
 export const Subtitle = styled.p`
@@ -95,7 +97,7 @@ export const Subtitle = styled.p`
 `;
 
 export const ImgWrapper = styled.div`
-  max-width: 555px;
+  max-width: 600px;
   display: flex;
   justify-content: ${({ start }) => (start ? "flex-start" : "flex-end")};
 `;
@@ -107,5 +109,5 @@ export const Img = styled.img`
   width: 100%;
   vertical-align: middle;
   display: inline-block;
-  max-height: 500px;
+  max-height: 600px;
 `;

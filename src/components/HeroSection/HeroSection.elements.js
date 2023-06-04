@@ -118,7 +118,7 @@ export const ProjectsButton = styled.a`
   color: #fff;
   max-width: 40px;
   cursor: pointer;
-  font-size: 3rem;
+  font-size: 4rem;
 `;
 export const NavIcon = styled(BsArrowDownCircle)`
   margin-right: 0.5rem;

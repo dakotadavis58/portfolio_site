@@ -8,9 +8,7 @@ const Home = () => {
     <>
       <HeroSection />
       {data.map((project) => {
-        return (
-          <InfoSection key={project.topLine} {...project} id="first_project" />
-        );
+        return <InfoSection key={project.topLine} {...project} />;
       })}
     </>
   );

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Container } from "../../globalStyles";
 import { Link } from "react-router-dom";
 import {
@@ -36,7 +36,26 @@ const InfoSection = ({
   id,
   noButtons,
   tech,
+  imgsm,
 }) => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  //choose the screen size
+  const handleResize = () => {
+    if (window.innerWidth < 720) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  };
+
+  // create an event listener
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+  });
+
+  // finally you can render components conditionally if isMobile is True or False
+
   return (
     <>
       <InfoSec lightBg={lightBg} id={id}>
@@ -48,7 +67,11 @@ const InfoSection = ({
                 <Heading lightText={lightText}>{headline}</Heading>
                 <Tech>
                   {tech.map((tech) => {
-                    return <TechItem key={tech}>{tech}</TechItem>;
+                    return (
+                      <TechItem lightBg={!lightBg} key={tech}>
+                        {tech}
+                      </TechItem>
+                    );
                   })}
                 </Tech>
                 <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
@@ -73,7 +96,7 @@ const InfoSection = ({
             <InfoCol>
               <ImgWrapper start={start}>
                 <a rel="noreferrer" target="_blank" href={demoLink}>
-                  <Img src={img} alt={alt} />
+                  <Img src={imgsm && isMobile ? imgsm : img} alt={alt} />
                 </a>
               </ImgWrapper>
             </InfoCol>

@@ -12,7 +12,7 @@ export const Nav = styled.nav`
   height: 80px;
   display: flex;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   z-index: 999;
   width: 100%;
 `;
@@ -25,8 +25,8 @@ export const NavbarContainer = styled(Container)`
 
 export const NavIcon = styled(BsCodeSlash)`
   margin-right: 0.5rem;
-  width: 2rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
 `;
 
 export const MobileIcon = styled.div`
@@ -38,8 +38,9 @@ export const MobileIcon = styled.div`
     top: 0;
     right: 0;
     transform: translate(-100%, 60%);
-    font-size: 1.8rem;
+    font-size: 2.4rem;
     cursor: pointer;
+    z-index: ${({ click }) => (click ? 5 : 999)};
   }
 `;
 
@@ -58,7 +59,7 @@ export const NavMenu = styled.div`
     height: 100vh;
     position: absolute;
     top: 0px;
-    left: ${({ click }) => (click ? 0 : "-100%")};
+    right: ${({ click }) => (click ? 0 : "-100%")};
     opacity: 1;
     transition: all 0.5s ease;
     background: ${darkBg};
@@ -66,7 +67,7 @@ export const NavMenu = styled.div`
 `;
 
 export const NavItem = styled.li`
-  height: 80px;
+  height: 8rem;
   transition: all 0.3s ease;
   box-shadow: 8px hidden transparent;
   border-bottom: 8px solid transparent;
